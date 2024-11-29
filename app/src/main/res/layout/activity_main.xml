@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Contenedor horizontal para los AutoCompleteTextView -->
+    <LinearLayout
+        android:id="@+id/planetSelectionLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- AutoCompleteTextView para el Planeta 1 -->
+        <AutoCompleteTextView
+            android:id="@+id/planet1AutoComplete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:hint="Selecciona un planeta"
+            android:dropDownHeight="200dp"/>
+
+        <!-- AutoCompleteTextView para el Planeta 2 -->
+        <AutoCompleteTextView
+            android:id="@+id/planet2AutoComplete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Selecciona un planeta"
+            android:dropDownHeight="200dp"/>
+
+    </LinearLayout>
+
+    <!-- Contenedor para mostrar las características de cada planeta -->
+    <LinearLayout
+        android:id="@+id/comparisonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/planetSelectionLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:gravity="center">
+
+        <!-- Características del Planeta 1 -->
+        <TextView
+            android:id="@+id/planet1Info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Características del Planeta 1"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+
+        <!-- Características del Planeta 2 -->
+        <TextView
+            android:id="@+id/planet2Info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Características del Planeta 2"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
